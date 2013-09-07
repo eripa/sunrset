@@ -18,12 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-  require 'sunrset'
-  d = Sunrset::TimeAndSun.new "40.83771", "-73.928375"
-  puts d.time_data.inspect
-  puts d.sun_data.inspect
-  puts d.sunrise.inspect
-  puts d.sunset.inspect
+    require 'sunrset'
+    d = Sunrset::TimeAndSun.new "40.83771", "-73.928375"
+    puts d.time_data.inspect
+    puts d.sun_data.inspect
+    puts d.date.inspect
+    puts d.sunrise.inspect
+    puts d.sunset.inspect
 
 ## Contributing
 
