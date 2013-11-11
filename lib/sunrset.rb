@@ -9,7 +9,6 @@ module Sunrset
     attr_reader :time_data, :sun_data, :date
     def initialize longitude, latitude
       url_time_api = "http://www.earthtools.org/timezone/#{longitude}/#{latitude}"
-      p url_time_api
       time_xml_data = Net::HTTP.get_response(URI.parse(url_time_api)).body
       @time_data = XmlSimple.xml_in(time_xml_data)
       @date = DateTime.parse @time_data["localtime"].first
